@@ -1,0 +1,22 @@
+[package]
+name = "var2_2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# gtk = "0.18"
+# glib = "0.18"
+# glib-sys = "0.9"
+# eframe = "0.24"
+rand = "0"
+serde = { version = "*", features = ["derive"] }
+serde_json = '*'
+
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
